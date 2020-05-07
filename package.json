@@ -4,7 +4,9 @@
   "description": "微信小程序基础结构",
   "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "medusa-server development",
+    "build": "medusa-server production"
   },
   "repository": {
     "type": "git",
@@ -27,5 +29,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "webpack-build-miniprogram": "https://github.com/Oc-master/webpack-build-miniprogram.git#develop"
   }
 }
