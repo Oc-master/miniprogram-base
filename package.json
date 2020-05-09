@@ -4,9 +4,9 @@
   "description": "微信小程序基础结构",
   "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "medusa-server development",
-    "build": "medusa-server production"
+    "dev": "cross-env OPERATING_ENV=development medusa-server --platform.wx",
+    "build": "cross-env OPERATING_ENV=production medusa-server --platform.wx",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
