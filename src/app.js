@@ -1,3 +1,5 @@
+import '@/styles/index.less';
+
 App({
   onLaunch() {
     // 第一次打开
