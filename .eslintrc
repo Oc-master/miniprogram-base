@@ -1,0 +1,35 @@
+{
+  "extends": "airbnb-base",
+  "env": {
+    "node": true,
+    "es6": true,
+    "commonjs": true
+  },
+  "globals": {
+    "wx": true,
+    "App": true,
+    "Page": true,
+    "Component": true,
+    "Behavior": true,
+    "getApp": true,
+    "getCurrentPages": true
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          [
+            "@",
+            "./src"
+          ]
+        ],
+        "extensions": [
+          ".js",
+          ".json",
+          ".less"
+        ]
+      }
+    }
+  },
+  "rules": {}
+}

@@ -1,0 +1,41 @@
+{
+  "name": "wx-miniprogram-base",
+  "version": "1.0.0",
+  "description": "微信小程序基础结构",
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "cross-env OPERATING_ENV=development medusa-server",
+    "build": "cross-env OPERATING_ENV=production medusa-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oc-master/wx-miniprogram-base.git"
+  },
+  "keywords": [
+    "wx",
+    "miniprogram"
+  ],
+  "author": "O_c",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oc-master/wx-miniprogram-base/issues"
+  },
+  "homepage": "https://github.com/Oc-master/wx-miniprogram-base#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "cz-conventional-changelog": "^3.2.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "stylelint-config-recess-order": "^2.0.4",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "webpack-build-miniprogram": "https://github.com/Oc-master/webpack-build-miniprogram.git#develop"
+  }
+}
