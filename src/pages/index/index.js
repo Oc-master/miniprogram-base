@@ -1,3 +1,5 @@
+import './index.less';
+
 Page({
   onLoad(query) {
     // 页面加载
