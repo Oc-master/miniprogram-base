@@ -4,8 +4,8 @@
   "description": "微信小程序基础结构",
   "main": "src/app.js",
   "scripts": {
-    "dev": "cross-env OPERATING_ENV=development medusa-server --platform.wx",
-    "build": "cross-env OPERATING_ENV=production medusa-server --platform.wx",
+    "dev": "cross-env OPERATING_ENV=development medusa-server",
+    "build": "cross-env OPERATING_ENV=production medusa-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
