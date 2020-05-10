@@ -2,7 +2,5 @@
   "pages": [
     "pages/index/index"
   ],
-  "window": {
-    "defaultTitle": "My App"
-  }
+  "window": {}
 }
