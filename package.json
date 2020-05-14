@@ -1,7 +1,7 @@
 {
-  "name": "wx-miniprogram-base",
+  "name": "miniprogram-base",
   "version": "1.0.0",
-  "description": "微信小程序基础结构",
+  "description": "小程序基础结构",
   "main": "src/app.js",
   "scripts": {
     "dev": "cross-env OPERATING_ENV=development medusa-server",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Oc-master/wx-miniprogram-base.git"
+    "url": "git+https://github.com/Oc-master/miniprogram-base.git"
   },
   "keywords": [
     "wx",
@@ -19,9 +19,12 @@
   "author": "O_c",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Oc-master/wx-miniprogram-base/issues"
+    "url": "https://github.com/Oc-master/miniprogram-base/issues"
   },
-  "homepage": "https://github.com/Oc-master/wx-miniprogram-base#readme",
+  "homepage": "https://github.com/Oc-master/miniprogram-base#readme",
+  "dependencies": {
+    "webpack-build-miniprogram": "https://github.com/Oc-master/webpack-build-miniprogram.git#develop"
+  },
   "devDependencies": {
     "cross-env": "^7.0.2",
     "cz-conventional-changelog": "^3.2.0",
@@ -34,8 +37,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "dependencies": {
-    "webpack-build-miniprogram": "https://github.com/Oc-master/webpack-build-miniprogram.git#develop"
   }
 }
