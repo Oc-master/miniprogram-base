@@ -6,6 +6,7 @@
     "commonjs": true
   },
   "globals": {
+    "$env": true,
     "wx": true,
     "App": true,
     "Page": true,
