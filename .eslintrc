@@ -19,18 +19,14 @@
     "import/resolver": {
       "alias": {
         "map": [
-          [
-            "@",
-            "./src"
-          ]
+          ["@", "./src"]
         ],
-        "extensions": [
-          ".js",
-          ".json",
-          ".less"
-        ]
+        "extensions": [".js", ".json", ".less"]
       }
     }
   },
-  "rules": {}
+  "rules": {
+    "no-void": ["error", { "allowAsStatement": true }],
+    "max-len": ["error", { "code": 120 }]
+  }
 }
