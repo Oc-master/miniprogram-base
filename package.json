@@ -4,8 +4,8 @@
   "description": "小程序基础结构",
   "main": "src/app.js",
   "scripts": {
-    "dev": "cross-env OPERATING_ENV=development medusa-server",
-    "build": "cross-env OPERATING_ENV=production medusa-server",
+    "dev": "medusa-server development",
+    "build": "medusa-server production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,21 +17,19 @@
     "miniprogram"
   ],
   "author": "O_c",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Oc-master/miniprogram-base/issues"
   },
   "homepage": "https://github.com/Oc-master/miniprogram-base#readme",
   "dependencies": {
-    "webpack-build-miniprogram": "https://github.com/Oc-master/webpack-build-miniprogram.git#develop"
+    "eslint-config-medusa": "^1.0.0",
+    "stylelint-config-medusa": "^1.0.0",
+    "webpack-build-miniprogram": "^1.1.2"
   },
   "devDependencies": {
-    "cross-env": "^7.0.2",
     "cz-conventional-changelog": "^3.2.0",
-    "eslint-config-airbnb-base": "^14.1.0",
-    "stylelint-config-recess-order": "^2.0.4",
-    "stylelint-config-standard": "^20.0.0",
-    "stylelint-order": "^4.0.0"
+    "eslint-config-airbnb-base": "^14.1.0"
   },
   "config": {
     "commitizen": {
