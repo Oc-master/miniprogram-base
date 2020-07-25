@@ -23,13 +23,12 @@
   },
   "homepage": "https://github.com/Oc-master/miniprogram-base#readme",
   "dependencies": {
-    "eslint-config-medusa": "^1.0.0",
+    "eslint-config-medusa": "^1.0.2",
     "stylelint-config-medusa": "^1.0.0",
     "webpack-build-miniprogram": "^1.1.2"
   },
   "devDependencies": {
-    "cz-conventional-changelog": "^3.2.0",
-    "eslint-config-airbnb-base": "^14.1.0"
+    "cz-conventional-changelog": "^3.2.0"
   },
   "config": {
     "commitizen": {
