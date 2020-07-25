@@ -1,3 +1,2 @@
 extends:
-  - "eslint-config-medusa"
-rules:
+  - eslint-config-medusa
