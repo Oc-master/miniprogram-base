@@ -33,5 +33,6 @@
 	"projectname": "miniprogram-base",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
+	"libVersion": "2.2.5",
 	"condition": {}
 }
