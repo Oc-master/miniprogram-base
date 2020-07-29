@@ -8,22 +8,10 @@
     "navigationBarTitleText": "Medusa",
     "backgroundColor": "#f8f8f8"
   },
-  "subpackages": [
-    {
-      "root": "package_demo",
-      "name": "demoPackage",
-      "pages": [
-        "pages/demo/index"
-      ]
-    }
-  ],
   "permission": {
     "scope.userLocation": {
       "desc": "您的位置信息将用于为您提供更好的用户体验"
     }
   },
-  "sitemapLocation": "sitemap.json",
-  "useExtendedLib": {
-    "weui": true
-  }
+  "sitemapLocation": "sitemap.json"
 }
