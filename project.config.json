@@ -18,6 +18,7 @@
 		"checkSiteMap": true,
 		"uploadWithSourceMap": true,
 		"compileHotReLoad": false,
+		"useMultiFrameRuntime": true,
 		"babelSetting": {
 			"ignore": [],
 			"disablePlugins": [],
