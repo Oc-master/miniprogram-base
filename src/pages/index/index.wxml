@@ -1,12 +1,1 @@
 <view class="welcome">Welcome to Medusa.</view>
-<view class="list" bindtap="onClick">
-  <view class="item" data-type="host">域名配置 hosts</view>
-  <view class="item" data-type="route">路由映射 routes</view>
-</view>
-<mp-dialog
-  mask="{{ true }}"
-  mask-closable="{{ true }}"
-  title="{{ dialog.title }}"
-  show="{{ isShowDialog }}">
-  <view>{{ dialog.content }}</view>
-</mp-dialog>
