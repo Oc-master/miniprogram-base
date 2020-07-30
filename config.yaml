@@ -1,0 +1,9 @@
+# 当前项目应用平台
+platform: wx
+# 样式单位 px 转换 rpx 的比例设定
+css_unit_ratio: 1
+# 域名配置
+development_host:
+  api: https://www.miniprogram.dev.com
+production_host:
+  api: https://www.miniprogram.pro.com
