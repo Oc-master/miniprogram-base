@@ -1,9 +1,9 @@
 {
-  "smartProgramRoot": "dist/",
   "appid": "",
   "compilation-args": {
     "common": {
-      "enhance": true
+      "enhance": true,
+      "ignoreTransJs": false
     }
   },
   "host": "baiduboxapp",
@@ -11,6 +11,7 @@
   "setting": {
     "urlCheck": false
   },
+  "smartProgramRoot": "dist/",
   "swan": {
     "baiduboxapp": {
       "extensionJsVersion": "100.14.255",
