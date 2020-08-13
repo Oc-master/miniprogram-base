@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/Oc-master/miniprogram-base#readme",
   "dependencies": {
-    "eslint-config-medusa": "^1.0.2",
+    "eslint-config-medusa": "^1.0.3",
     "stylelint-config-medusa": "^1.0.0",
     "webpack-build-miniprogram": "^1.1.2"
   },
