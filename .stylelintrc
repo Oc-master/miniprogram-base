@@ -1,2 +1,2 @@
 extends:
-  - "stylelint-config-medusa"
+  - stylelint-config-medusa
