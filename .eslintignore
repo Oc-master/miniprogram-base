@@ -6,3 +6,6 @@ dist/
 
 # Library
 src/libs/
+
+# Configuration file
+webpack.config.js
