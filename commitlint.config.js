@@ -12,5 +12,6 @@ module.exports = {
    */
   rules: {
     'header-max-length': [1, 'always', 80],
+    'subject-case': [0, 'never'],
   },
 };
