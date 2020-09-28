@@ -23,13 +23,14 @@
   },
   "homepage": "https://github.com/Oc-master/miniprogram-base#readme",
   "dependencies": {
-    "eslint-config-medusa": "1.0.4",
-    "medusa-wx-router": "1.0.1",
-    "stylelint-config-medusa": "1.0.0",
-    "webpack-build-miniprogram": "1.1.5"
+    "medusa-wx-router": "1.0.2"
   },
   "devDependencies": {
-    "cz-conventional-changelog": "^3.2.0"
+    "@typescript-eslint/eslint-plugin": "^4.2.0",
+    "@typescript-eslint/parser": "^4.2.0",
+    "cz-conventional-changelog": "^3.2.0",
+    "stylelint-config-medusa": "^1.0.0",
+    "webpack-build-miniprogram": "^1.2.3"
   },
   "config": {
     "commitizen": {
