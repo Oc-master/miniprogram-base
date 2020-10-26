@@ -1,8 +1,9 @@
 <view class="layout">
-  <view class="custom-class" hidden="{{ options.isShowSkeleton }}"><slot></slot></view>
+  <view class="custom-class" hidden="{{ options.isShowSkeleton || options.hasError }}"><slot></slot></view>
   <skeleton
+    wx:if="{{ options.isShowSkeleton }}"
     type="{{ options.skeletonOptions.type }}"
     isNeedLoading="{{ options.skeletonOptions.isNeedLoading }}"
-    wx:if="{{ options.isShowSkeleton }}"
   />
+  <error-page wx:if="{{ options.hasError }}" />
 </view>

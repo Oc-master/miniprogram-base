@@ -7,6 +7,7 @@ Component({
       value: {
         isShowSkeleton: false,
         skeletonOptions: null,
+        hasError: false,
       },
     },
   },
