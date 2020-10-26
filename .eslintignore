@@ -9,3 +9,4 @@ src/libs/
 
 # Configuration file
 webpack.config.js
+commitlint.config.js
