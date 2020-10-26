@@ -8,6 +8,9 @@
     "navigationBarTitleText": "Medusa",
     "backgroundColor": "#f8f8f8"
   },
+  "usingComponents": {
+    "layout": "/components/Layout/index"
+  },
   "permission": {
     "scope.userLocation": {
       "desc": "您的位置信息将用于为您提供更好的用户体验"

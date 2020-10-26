@@ -1,0 +1,8 @@
+<view class="layout">
+  <view class="custom-class" hidden="{{ options.isShowSkeleton }}"><slot></slot></view>
+  <skeleton
+    type="{{ options.skeletonOptions.type }}"
+    isNeedLoading="{{ options.skeletonOptions.isNeedLoading }}"
+    wx:if="{{ options.isShowSkeleton }}"
+  />
+</view>

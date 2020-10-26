@@ -1,0 +1,12 @@
+<view class="loading">
+  <view class="{{ isNeedLoading ? 'cube' : 'cube animation' }}" wx:if="{{ type === 'cube' }}">
+    <view class="cube__item" />
+    <view class="cube__item" />
+    <view class="cube__item" />
+    <view class="cube__item" />
+  </view>
+  <view class="loading__container" wx:if="{{ isNeedLoading }}">
+    <loading />
+    <view class="loading__text">loading...</view>
+  </view>
+</view>
