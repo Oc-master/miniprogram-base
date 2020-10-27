@@ -1,1 +1,3 @@
-<view class="welcome">Welcome to Medusa.</view>
+<layout options="{{ $page }}"
+  <view class="welcome">Welcome to Medusa.</view>
+</layout>

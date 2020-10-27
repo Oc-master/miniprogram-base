@@ -1,12 +1,12 @@
 const platform = wx;
 
 const DEFAULT_LOADING_OPTIONS = {
-  isShow: true,
+  isShow: false,
   text: 'loading...',
 };
 
 const DEFAULT_TOAST_OPTIONS = {
-  isShow: true,
+  isShow: false,
   text: '服务器开小差了哦',
 };
 
@@ -67,22 +67,23 @@ class Request {
         method: upperMethod,
         success: (res) => {
           const { data: resData, statusCode } = res;
+          /** 验证服务器响应是否异常 */
           const isError = (/^(4|5)[0-9][0-9]$/).test(statusCode);
-          if (isError) {
-            const { msg, message } = resData;
-            if (toastOptions.isShow) {
-              setTimeout(() => {
-                platform.showToast({
-                  title: msg || message || toastOptions.text,
-                  mask: true,
-                  icon: 'none',
-                });
-              }, 0);
-            }
-            this.isFilterRes ? resolve([resData, null]) : resolve([res, null]);
+          if (!isError) {
+            this.isFilterRes ? resolve([null, resData]) : resolve([null, res]);
             return undefined;
           }
-          this.isFilterRes ? resolve([null, resData]) : resolve([null, res]);
+          const { msg, message } = resData;
+          if (toastOptions.isShow) {
+            setTimeout(() => {
+              platform.showToast({
+                title: msg || message || toastOptions.text,
+                mask: true,
+                icon: 'none',
+              });
+            }, 0);
+          }
+          this.isFilterRes ? resolve([resData, null]) : resolve([res, null]);
         },
         fail: (err = {}) => {
           try {

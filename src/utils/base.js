@@ -5,11 +5,8 @@ function beforeOnLoad() {
   const { isNeedLoading, skeletonType } = this.config;
   this.setData({ '$page.skeletonOptions': { isNeedLoading, type: skeletonType } });
   this.showSkeleton();
-}
-
-function errorHandle() {
-  this.hideSkeleton();
-  this.showErrorPage();
+  /** 重置 ErrorPage 的状态 */
+  this.hideErrorPage();
 }
 
 export default (params = {}) => {
@@ -38,6 +35,10 @@ export default (params = {}) => {
     hideErrorPage() {
       this.setData({ '$page.hasError': false });
     },
+    errorHandle() {
+      this.hideSkeleton();
+      this.showErrorPage();
+    },
   };
   const { config = {}, data = {} } = params;
   return Page({
@@ -61,7 +62,7 @@ export default (params = {}) => {
         const query = mc.decoding(options);
         params.onLoad.call(this, query);
       } catch (error) {
-        errorHandle.call(this);
+        this.errorHandle();
       }
     },
   });
