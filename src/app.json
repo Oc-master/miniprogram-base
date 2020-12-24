@@ -9,7 +9,7 @@
     "backgroundColor": "#f8f8f8"
   },
   "usingComponents": {
-    "layout": "/components/Layout/index"
+    "layout": "/components/base/Layout/index"
   },
   "permission": {
     "scope.userLocation": {

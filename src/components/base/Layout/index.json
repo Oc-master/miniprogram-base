@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "skeleton": "/components/base/Skeleton/index",
+    "error-page": "/components/base/ErrorPage/index"
+  }
+}

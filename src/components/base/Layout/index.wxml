@@ -1,4 +1,4 @@
-<view class="layout">
+<view class="layout" style="{{ isIPhoneX ? 'padding-bottom: 68rpx' : '' }}">
   <view class="custom-class" hidden="{{ options.isShowSkeleton || options.hasError }}"><slot></slot></view>
   <skeleton
     wx:if="{{ options.isShowSkeleton }}"

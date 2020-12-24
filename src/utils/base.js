@@ -1,26 +1,26 @@
 function beforeOnLoad() {
+  /** 重置 ErrorPage 的状态 */
+  this.hideErrorPage();
   const { isNeedSkeleton } = this.config;
   if (!isNeedSkeleton) return undefined;
   /** 设置骨架屏样式并展示 */
   const { isNeedLoading, skeletonType } = this.config;
   this.setData({ '$page.skeletonOptions': { isNeedLoading, type: skeletonType } });
   this.showSkeleton();
-  /** 重置 ErrorPage 的状态 */
-  this.hideErrorPage();
 }
 
 export default (params = {}) => {
   const DEFAULT_PARAMS = {
     config: {
-      isNeedSkeleton: true,
       isNeedLoading: true,
+      isNeedSkeleton: true,
       skeletonType: 'cube',
     },
     data: {
       $page: {
+        hasError: false,
         isShowSkeleton: false,
         skeletonOptions: null,
-        hasError: false,
       },
     },
     showSkeleton() {
