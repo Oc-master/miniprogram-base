@@ -1,1 +1,38 @@
+// 背景色
 @backgroundColor: #f8f8f8;
+// 主题色
+@mainThemeColor: #d8c2aa;
+// 禁用状态颜色
+@disabledColor: #eaeaea;
+// 主要字体颜色
+@mainFontColor: #000;
+// 次级字体颜色
+@subFontColor: #999;
+// 圆角值
+@borderRadius: 10px;
+
+// 常用主题状态
+.primaryBtn(@width, @height) {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: @width;
+  height: @height;
+  color: @mainFontColor;
+  background: @mainThemeColor;
+  border-radius: @borderRadius;
+}
+
+// 禁用状态
+.disabledBtn(@width, @height) {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: @width;
+  height: @height;
+  color: @subFontColor;
+  background: @disabledColor;
+  border-radius: @borderRadius;
+}
