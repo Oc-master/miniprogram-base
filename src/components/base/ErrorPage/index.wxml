@@ -1,5 +1,5 @@
 <view class="error">
-  <image class="error__image" src="/assets/images/error_rockets.png" mode="aspectFit" />
+  <image class="error__image" src="/assets/images/commons/error_rockets.png" mode="aspectFit" />
   <view class="error__tips">页面开小差了</view>
   <view class="error__button" bind:tap="onReload">重新加载</view>
 </view>
