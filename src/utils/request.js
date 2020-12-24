@@ -1,5 +1,3 @@
-const platform = wx;
-
 const DEFAULT_LOADING_OPTIONS = {
   isShow: false,
   text: 'loading...',
@@ -10,14 +8,10 @@ const DEFAULT_TOAST_OPTIONS = {
   text: '服务器开小差了哦',
 };
 
-const POST_DEFAULT_HEADERS = {
-  'content-type': 'application/x-www-form-urlencoded',
-};
-
 /**
  * Request 请求功能类
  * @param {String} baseUrl API 地址通用部分字符串
- * @param {Boolean} isFilterRes 是否过滤请求返回的数据结构 true: 只返回业务服务器的数据
+ * @param {Boolean} isFilterRes 是否过滤请求返回的数据结构 true: 只返回开发者服务器的数据
  */
 class Request {
   constructor({ baseUrl = '', isFilterRes = true } = {}) {
@@ -33,17 +27,14 @@ class Request {
    */
   request(options) {
     const {
-      url, header = {}, method = 'GET', loadingOps = {}, toastOps = {},
+      url, method = 'GET', loadingOps = {}, toastOps = {},
     } = options;
     if (!url) {
       // eslint-disable-next-line no-console
-      console.error('url 为请求函数必填字段');
+      console.error('Request: url 为请求函数必填字段!');
       return undefined;
     }
     const upperMethod = method.toUpperCase();
-    if (upperMethod === 'POST') {
-      Object.assign(header, POST_DEFAULT_HEADERS);
-    }
     const loadingOptions = {
       ...DEFAULT_LOADING_OPTIONS,
       ...loadingOps,
@@ -55,14 +46,15 @@ class Request {
     // eslint-disable-next-line consistent-return
     return new Promise((resolve) => {
       if (loadingOptions.isShow) {
-        platform.showLoading({
+        wx.showToast({
           title: loadingOptions.text,
+          icon: 'loading',
+          duration: 60000,
           mask: true,
         });
       }
-      platform.request({
+      wx.request({
         ...options,
-        header,
         url: `${this.baseUrl}${url}`,
         method: upperMethod,
         success: (res) => {
@@ -76,7 +68,7 @@ class Request {
           const { msg, message } = resData;
           if (toastOptions.isShow) {
             setTimeout(() => {
-              platform.showToast({
+              wx.showToast({
                 title: msg || message || toastOptions.text,
                 mask: true,
                 icon: 'none',
@@ -90,7 +82,7 @@ class Request {
             const { msg, message } = err;
             if (toastOptions.isShow) {
               setTimeout(() => {
-                platform.showToast({
+                wx.showToast({
                   title: msg || message || toastOptions.text,
                   mask: true,
                   icon: 'none',
@@ -103,7 +95,7 @@ class Request {
           }
         },
         complete: () => {
-          loadingOptions.isShow && platform.hideLoading();
+          loadingOptions.isShow && wx.hideToast();
         },
       });
     });
