@@ -36,14 +36,13 @@ Component({
         return false;
       }
       const hasIPhoneX = model.includes('iPhone X');
-      if (hasIPhoneX) {
+      /** iPhoneX 之后生产的机型屏幕高度大于 812 */
+      const isHigh = screenHeight >= 812;
+      if (hasIPhoneX || isHigh) {
         wx.setStorageSync('isIPhoneX', true);
         return true;
       }
-      if (screenHeight >= 812) {
-        wx.setStorageSync('isIPhoneX', true);
-        return true;
-      }
+      /** 以上两个条件都不满足的情况下判定为 iPhoneX 之前生产的机型 */
       wx.setStorageSync('isIPhoneX', false);
       return false;
     },
