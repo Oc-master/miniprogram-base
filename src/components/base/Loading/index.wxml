@@ -1,9 +1,4 @@
-<view class="loading">
-  <view class="wave" wx:if="{{ type === 'wave' }}">
-    <view class="wave__item" />
-    <view class="wave__item" />
-    <view class="wave__item" />
-    <view class="wave__item" />
-    <view class="wave__item" />
-  </view>
+<view class="medusa-loading {{ vertical ? 'medusa-loading--vertical' : '' }}" style="font-size: {{ size + 'px' }};color: {{ color }};">
+  <view class="medusa-loading__{{ type }}"></view>
+  <view class="medusa-loading__text" style="font-size: {{ textSize + 'px' }}"><slot /></view>
 </view>
