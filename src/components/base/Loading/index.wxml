@@ -1,4 +1,4 @@
 <view class="medusa-loading {{ vertical ? 'medusa-loading--vertical' : '' }}" style="font-size: {{ size + 'px' }};color: {{ color }};">
   <view class="medusa-loading__{{ type }}"></view>
-  <view class="medusa-loading__text" style="font-size: {{ textSize + 'px' }}"><slot /></view>
+  <view class="medusa-loading__text" style="font-size: {{ textSize + 'px' }};color: {{ textColor }};"><slot /></view>
 </view>

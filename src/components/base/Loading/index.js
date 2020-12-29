@@ -18,6 +18,10 @@ Component({
       type: Number,
       value: 16,
     },
+    textColor: {
+      type: String,
+      value: '',
+    },
     vertical: {
       type: Boolean,
       value: false,
