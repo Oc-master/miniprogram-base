@@ -11,7 +11,7 @@ Page({
       const { isError } = this.data;
       if (isError) {
         this.setData({ isError: false });
-        return setTimeout(() => reject(), 3000);
+        return setTimeout(() => reject(), 0);
       }
       return setTimeout(() => resolve(), 2000);
     })
