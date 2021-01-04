@@ -1,3 +1,5 @@
+import { getInstance } from '@/utils/util';
+
 function beforeOnLoad() {
   /** 重置 ErrorPage 的状态 */
   this.hideErrorPage();
@@ -39,6 +41,11 @@ export default (params = {}) => {
       this.hideSkeleton();
       this.showErrorPage();
     },
+    reloadPrePage() {
+      const context = getInstance(2);
+      const { options } = context;
+      context.onLoad(options);
+    },
   };
   const { config = {}, data = {} } = params;
   return Page({
@@ -59,8 +66,14 @@ export default (params = {}) => {
         return undefined;
       }
       try {
-        const query = mc.decoding(options);
-        params.onLoad.call(this, query);
+        console.log('options---', options);
+        const { isMedusaRouter = '' } = options;
+        if (isMedusaRouter) {
+          const query = mc.decoding(options);
+          params.onLoad.call(this, query);
+        } else {
+          params.onLoad.call(this, options);
+        }
       } catch (error) {
         this.errorHandle();
       }
