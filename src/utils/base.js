@@ -5,24 +5,18 @@ function beforeOnLoad() {
   this.hideErrorPage();
   const { isNeedSkeleton } = this.config;
   if (!isNeedSkeleton) return undefined;
-  /** 设置骨架屏样式并展示 */
-  const { isNeedLoading, skeletonType } = this.config;
-  this.setData({ '$page.skeletonOptions': { isNeedLoading, type: skeletonType } });
   this.showSkeleton();
 }
 
 export default (params = {}) => {
   const DEFAULT_PARAMS = {
     config: {
-      isNeedLoading: true,
       isNeedSkeleton: true,
-      skeletonType: 'cube',
     },
     data: {
       $page: {
         hasError: false,
         isShowSkeleton: false,
-        skeletonOptions: null,
       },
     },
     showSkeleton() {
@@ -41,6 +35,7 @@ export default (params = {}) => {
       this.hideSkeleton();
       this.showErrorPage();
     },
+    /** 触发上一页面 onLoad 生命周期 */
     reloadPrePage() {
       const context = getInstance(2);
       const { options } = context;
@@ -66,7 +61,6 @@ export default (params = {}) => {
         return undefined;
       }
       try {
-        console.log('options---', options);
         const { isMedusaRouter = '' } = options;
         if (isMedusaRouter) {
           const query = mc.decoding(options);
