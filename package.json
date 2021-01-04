@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/Oc-master/miniprogram-base#readme",
   "dependencies": {
-    "medusa-wx-router": "^1.0.3"
+    "medusa-wx-router": "^1.0.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
