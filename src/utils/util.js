@@ -25,6 +25,10 @@ export function debounce(fn, delay = 300) {
 export function getInstance(depth = 1) {
   const pages = getCurrentPages();
   const { length } = pages;
+  if (depth > length) {
+    console.error('Error: 非法获取页面实例, 超出页面栈深度!');
+    return null;
+  }
   return pages[length - depth];
 }
 
