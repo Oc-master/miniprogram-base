@@ -42,7 +42,7 @@
 |   |-- utils                       公共封装函数存放目录（自我封装）
 |       |-- base.js                 基础能力
 |       |-- request.js              基础请求功能
-|-- .editorconfig  EditorConfig     配置文件
+|-- .editorconfig                   EditorConfig     配置文件
 |-- .env                            环境变量配置文件
 |-- .eslintignore
 |-- .eslintrc
