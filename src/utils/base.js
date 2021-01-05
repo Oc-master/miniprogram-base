@@ -70,6 +70,7 @@ export default (params = {}) => {
         }
       } catch (error) {
         this.errorHandle();
+        throw new Error(error);
       }
     },
   });
