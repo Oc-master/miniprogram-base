@@ -12,7 +12,7 @@
  */
 import Request from '@/utils/request';
 
-const { api } = mc.$hosts;
+const { api } = MS_HOSTS;
 const request = new Request({ baseUrl: api });
 
 /**

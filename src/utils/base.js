@@ -63,7 +63,7 @@ export default (params = {}) => {
       try {
         const { isMedusaRouter = '' } = options;
         if (isMedusaRouter) {
-          const query = mc.decoding(options);
+          const query = ms.decoding(options);
           params.onLoad.call(this, query);
         } else {
           params.onLoad.call(this, options);
