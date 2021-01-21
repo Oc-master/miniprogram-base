@@ -1,5 +1,0 @@
-<view class="medusa-error">
-  <image class="medusa-error__image" src="/assets/images/commons/common_error.png" mode="aspectFit" />
-  <view class="medusa-error__tips">哎呀，出错了!</view>
-  <view class="medusa-error__button" bindtap="onReload">重新加载</view>
-</view>

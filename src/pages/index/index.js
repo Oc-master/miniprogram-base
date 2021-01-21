@@ -1,4 +1,5 @@
 import Page from '@/utils/base';
+
 import './index.less';
 
 Page({
