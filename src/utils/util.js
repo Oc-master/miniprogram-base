@@ -26,6 +26,7 @@ export function getInstance(depth = 1) {
   const pages = getCurrentPages();
   const { length } = pages;
   if (depth > length) {
+    // eslint-disable-next-line no-console
     console.error('Error: 非法获取页面实例, 超出页面栈深度!');
     return null;
   }
